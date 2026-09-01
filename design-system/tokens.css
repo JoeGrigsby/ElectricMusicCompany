@@ -1,0 +1,137 @@
+/* ============================================================
+   Houston Guitar Family — shared design tokens
+   Source of truth for Robin Guitars, Steamboat Amps, Rio Grande.
+   Values sampled from approved homepage mockups (Sept 2026).
+   Palette + typeface confirmed by owner Sept 2026 (DECISIONS.md #3).
+   ============================================================ */
+
+/* Self-hosted per rule "Self-hosted assets only" — copy design-system/fonts/
+   into each site's own theme assets at build time; do not link fonts.googleapis.com. */
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/bebas-neue-v16-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/inter-v20-latin-variable.woff2") format("woff2-variations");
+}
+
+:root {
+  /* ---- Color ---- */
+  --ink:          #111111;  /* carbon black: primary dark, stage
+                               environments and hardware            */
+  --ink-soft:     #241e19;  /* raised surfaces on dark (chips)     */
+  --cream:        #f5f1e8;  /* bone white: primary background,
+                               vintage binding and finishes         */
+  --paper:        #ffffff;  /* text on dark / light cards          */
+  --accent:       #c66a2a;  /* burnt orange: signature accent — CTAs,
+                               headline lines, eyebrows, links on dark */
+  --accent-hover: color-mix(in srgb, var(--accent) 82%, black);
+  --accent-soft:  color-mix(in srgb, var(--accent) 55%, white);
+  --copper:       #c4421a;  /* Rio Grande pickup windings; family
+                               connection across brands              */
+  --walnut:       #4a3628;  /* fingerboards and wood grain           */
+  --brass:        #9c7a41;  /* aged brass: premium highlight         */
+  --text-on-light:#231d17;
+  --text-muted-dark:  #b9aea2; /* sampled placeholder — resample from final assets */
+  --text-muted-light: #6f655a;
+
+  /* ---- Type ----
+     Display: Bebas Neue, heavy condensed uppercase (free, OFL).
+     Body: Inter, neutral sans (free, OFL). Decision resolved in
+     planning/DECISIONS.md #3 — font files self-hosted in fonts/. */
+  --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
+  --font-body:    "Inter", system-ui, sans-serif;
+
+  --fs-hero:    clamp(2.5rem, 6vw, 4.5rem);
+  --fs-h2:      clamp(1.75rem, 3.5vw, 2.5rem);
+  --fs-h3:      1.375rem;
+  --fs-body:    1rem;
+  --fs-eyebrow: 0.8125rem;
+
+  --lh-tight: 1.05;   /* display */
+  --lh-body:  1.6;
+
+  --track-eyebrow: 0.08em;
+
+  /* ---- Shape & spacing ---- */
+  --radius-btn:  8px;    /* buttons + MODEL SHOWN chip only        */
+  --radius-none: 0;      /* imagery and cards are square-cornered  */
+  --space-band:  clamp(3rem, 8vw, 6rem);   /* vertical band padding */
+  --space-gutter: clamp(1rem, 4vw, 2.5rem);
+  --measure: 34rem;      /* max width for running text             */
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(.2,.7,.2,1);
+  --dur:  180ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur: 0ms; }
+}
+
+/* ============================================================
+   Shared component contracts (implement per-platform, same API)
+   ============================================================ */
+
+/* Orange CTA — identical on all three sites */
+.btn-accent {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  padding: 0.75em 1.6em;
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  transition: background var(--dur) var(--ease);
+}
+.btn-accent:hover, .btn-accent:focus-visible { background: var(--accent-hover); }
+.btn-accent:focus-visible { outline: 2px solid var(--paper); outline-offset: 2px; }
+
+/* Texas lockup — outline icon + two-line label, appears on every hero */
+.texas-lockup {
+  display: flex; align-items: center; gap: 0.75rem;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+.texas-lockup svg { width: 2.5rem; height: auto; fill: none; stroke: currentColor; }
+
+/* MODEL SHOWN chip — bottom-right of hero imagery */
+.model-chip {
+  background: color-mix(in srgb, var(--ink) 82%, transparent);
+  color: var(--paper);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-btn);
+}
+.model-chip .model-chip__label {
+  display: block;
+  color: var(--accent);
+  font-size: 0.6875rem;
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+}
+
+/* Section eyebrow with trailing rule: "THE WORKSHOP ————" */
+.eyebrow-rule {
+  display: flex; align-items: center; gap: 0.75rem;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+}
+.eyebrow-rule::after {
+  content: ""; width: 8rem; height: 1px; background: var(--accent-soft);
+}

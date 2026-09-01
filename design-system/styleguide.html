@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Houston Guitar Family — Design System Styleguide</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--text-on-light);
+    font-family: var(--font-body);
+    line-height: var(--lh-body);
+  }
+  main { max-width: 60rem; margin: 0 auto; padding: var(--space-band) var(--space-gutter); }
+  h1, h2 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    line-height: var(--lh-tight);
+    margin: 0 0 0.5em;
+  }
+  h1 { font-size: var(--fs-hero); color: var(--ink); }
+  h2 { font-size: var(--fs-h2); color: var(--ink); margin-top: var(--space-band); }
+  p { max-width: var(--measure); }
+  section + section { margin-top: 2rem; }
+
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 1.5rem; }
+  .swatch { border-radius: var(--radius-btn); overflow: hidden; border: 1px solid var(--accent-soft); background: var(--paper); }
+  .swatch__color { height: 5rem; }
+  .swatch__meta { padding: 0.75rem 1rem; font-size: 0.875rem; }
+  .swatch__meta strong { display: block; font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--track-eyebrow); }
+
+  .dark-band { background: var(--ink); color: var(--paper); padding: var(--space-band) var(--space-gutter); border-radius: var(--radius-none); }
+  .dark-band h2 { color: var(--paper); }
+
+  .type-sample { display: flex; align-items: baseline; gap: 1.5rem; flex-wrap: wrap; margin: 1rem 0; }
+  .type-sample .label { font-size: 0.75rem; color: var(--text-muted-light); width: 6rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="texas-lockup">Houston Guitar Family — Design System</p>
+  <h1>Great Tone<br>Starts Here.</h1>
+  <p>Bebas Neue for display, Inter for body — self-hosted, no CDN calls. This page renders every shared token so the pairing can be screenshot-approved before it's ported into any of the three sites.</p>
+
+  <section>
+    <h2>Type</h2>
+    <div class="type-sample"><span class="label">Display</span><span style="font-family:var(--font-display); text-transform:uppercase; font-size:2.5rem; line-height:1;">Rio Grande Pickups</span></div>
+    <div class="type-sample"><span class="label">Eyebrow</span><span class="eyebrow-rule">The Workshop</span></div>
+    <div class="type-sample"><span class="label">Body</span><span style="font-family:var(--font-body); font-weight:400;">The quick brown fox jumps over the lazy dog. 0123456789</span></div>
+    <div class="type-sample"><span class="label">Body 600</span><span style="font-family:var(--font-body); font-weight:600;">The quick brown fox jumps over the lazy dog.</span></div>
+  </section>
+
+  <section>
+    <h2>Color</h2>
+    <div class="swatches">
+      <div class="swatch"><div class="swatch__color" style="background:var(--cream)"></div><div class="swatch__meta"><strong>Bone White</strong>--cream</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:var(--ink)"></div><div class="swatch__meta"><strong>Carbon Black</strong>--ink</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:var(--accent)"></div><div class="swatch__meta"><strong>Burnt Orange</strong>--accent</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:var(--copper)"></div><div class="swatch__meta"><strong>Copper</strong>--copper</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:var(--walnut)"></div><div class="swatch__meta"><strong>Walnut</strong>--walnut</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:var(--brass)"></div><div class="swatch__meta"><strong>Aged Brass</strong>--brass</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Components</h2>
+    <a class="btn-accent" href="#">Shop Pickups</a>
+  </section>
+
+  <section class="dark-band">
+    <h2>On dark</h2>
+    <p class="texas-lockup">Hand Crafted in Houston, Texas</p>
+    <div class="model-chip"><span class="model-chip__label">Model Shown</span>Texas Humbucker</div>
+  </section>
+</main>
+</body>
+</html>
