@@ -55,14 +55,12 @@
     flex-direction: column;
     gap: 0.75rem;
     border-top: 4px solid var(--card-accent, var(--accent));
-    text-decoration: none;
     transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
   }
-  .brand-card:hover, .brand-card:focus-visible {
+  .brand-card:hover, .brand-card:focus-within {
     transform: translateY(-2px);
     box-shadow: 0 12px 24px -12px rgba(17, 17, 17, 0.35);
   }
-  .brand-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .brand-card__eyebrow {
     font-family: var(--font-display);
     text-transform: uppercase;
@@ -83,11 +81,29 @@
     color: var(--text-muted-light);
     flex-grow: 1;
   }
+  .brand-card__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.25rem;
+  }
   .brand-card__link {
     font-weight: 600;
+    text-decoration: none;
     color: var(--card-accent, var(--accent));
   }
+  .brand-card__link:hover, .brand-card__link:focus-visible { text-decoration: underline; }
   .brand-card__link::after { content: " \2192"; }
+  .brand-card__link--muted {
+    color: var(--text-muted-light);
+    font-weight: 500;
+    font-size: 0.9375rem;
+  }
+  .brand-card__note {
+    color: var(--text-muted-light);
+    font-size: 0.8125rem;
+    font-style: italic;
+  }
 
   footer {
     background: var(--ink);
@@ -110,33 +126,45 @@
 
   <main>
     <div class="brands">
-      <a class="brand-card" style="--card-accent: var(--accent)" href="https://www.robinguitars.com/" rel="noopener">
+      <div class="brand-card" style="--card-accent: var(--accent)">
         <span class="brand-card__eyebrow">Guitars</span>
         <h2>Robin Guitars</h2>
         <p>Built one at a time. Played for a lifetime.</p>
-        <span class="brand-card__link">Visit robinguitars.com</span>
-      </a>
+        <div class="brand-card__actions">
+          <a class="brand-card__link" href="design-system/mockups/robin-preview.html">Preview the new design</a>
+          <a class="brand-card__link brand-card__link--muted" href="https://www.robinguitars.com/" rel="noopener">Current site: robinguitars.com</a>
+        </div>
+      </div>
 
-      <a class="brand-card" style="--card-accent: var(--copper)" href="https://www.riograndepickups.com/" rel="noopener">
+      <div class="brand-card" style="--card-accent: var(--copper)">
         <span class="brand-card__eyebrow">Pickups</span>
         <h2>Rio Grande Pickups</h2>
         <p>Great Tone Starts Here — the original hot Texas pickup.</p>
-        <span class="brand-card__link">Visit riograndepickups.com</span>
-      </a>
+        <div class="brand-card__actions">
+          <a class="brand-card__link" href="design-system/mockups/riogrande-preview.html">Preview the new design</a>
+          <a class="brand-card__link brand-card__link--muted" href="https://www.riograndepickups.com/" rel="noopener">Current site: riograndepickups.com</a>
+        </div>
+      </div>
 
-      <a class="brand-card" style="--card-accent: var(--accent)" href="https://www.steamboatamps.com/" rel="noopener">
+      <div class="brand-card" style="--card-accent: var(--accent)">
         <span class="brand-card__eyebrow">Amps</span>
         <h2>Steamboat Amps</h2>
         <p>Built different. Played loud.</p>
-        <span class="brand-card__link">Visit steamboatamps.com</span>
-      </a>
+        <div class="brand-card__actions">
+          <a class="brand-card__link" href="design-system/mockups/steamboat-preview.html">Preview the new design</a>
+          <a class="brand-card__link brand-card__link--muted" href="https://www.steamboatamps.com/" rel="noopener">Current site: steamboatamps.com</a>
+        </div>
+      </div>
 
-      <a class="brand-card" style="--card-accent: var(--brass)" href="https://www.bigtexguitar.com/" rel="noopener">
+      <div class="brand-card" style="--card-accent: var(--brass)">
         <span class="brand-card__eyebrow">Family Brand</span>
         <h2>Big Tex</h2>
         <p>The fourth brand in the family.</p>
-        <span class="brand-card__link">Visit bigtexguitar.com</span>
-      </a>
+        <div class="brand-card__actions">
+          <a class="brand-card__link" href="https://www.bigtexguitar.com/" rel="noopener">Visit bigtexguitar.com</a>
+        </div>
+        <p class="brand-card__note">Not part of this redesign — footer link only.</p>
+      </div>
     </div>
   </main>
 

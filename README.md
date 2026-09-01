@@ -14,7 +14,7 @@ design-system/
   tokens.json                  Machine-readable mirror for theme.json / Stencil config
   fonts/                       Self-hosted Bebas Neue + Inter (woff2)
   styleguide.html               Static preview of every token + shared component
-  mockups/                     Approved homepage mockups (PNG/JPG)
+  mockups/                     Approved homepage mockups (PNG/JPG) + *-preview.html wrappers
 sites/
   robin-guitars/CLAUDE.md      WP block theme rules, homepage build order, content inventory
   steamboat-amps/CLAUDE.md     Same, plus repairs-page emphasis and asset-purge rules
