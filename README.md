@@ -6,6 +6,7 @@ system. `CLAUDE.md` is the workspace entry point — read it (and
 `BUILD_SPEC.md`) before starting any site work.
 
 ```
+index.html                     Family hub page — links out to all four brand sites
 CLAUDE.md                      Workspace rules, loaded every session
 BUILD_SPEC.md                  Full audit, architecture, page inventories, launch checklist
 design-system/
