@@ -1,0 +1,127 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "72rem",
+      "wideSize": "90rem"
+    },
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultPalette": false,
+      "palette": [
+        { "slug": "ink", "name": "Carbon Black", "color": "#111111" },
+        { "slug": "ink-soft", "name": "Ink Soft", "color": "#241e19" },
+        { "slug": "cream", "name": "Bone White", "color": "#f5f1e8" },
+        { "slug": "paper", "name": "Paper", "color": "#ffffff" },
+        { "slug": "accent", "name": "Burnt Orange", "color": "#c66a2a" },
+        { "slug": "accent-hover", "name": "Burnt Orange Hover", "color": "#a25722" },
+        { "slug": "accent-soft", "name": "Accent Soft", "color": "#e0ad8a" },
+        { "slug": "copper", "name": "Copper", "color": "#c4421a" },
+        { "slug": "walnut", "name": "Walnut", "color": "#4a3628" },
+        { "slug": "brass", "name": "Aged Brass", "color": "#9c7a41" },
+        { "slug": "text-on-light", "name": "Text on Light", "color": "#231d17" },
+        { "slug": "text-muted-dark", "name": "Text Muted Dark", "color": "#b9aea2" },
+        { "slug": "text-muted-light", "name": "Text Muted Light", "color": "#6f655a" }
+      ]
+    },
+    "typography": {
+      "customFontSize": false,
+      "fontFamilies": [
+        {
+          "slug": "display",
+          "name": "Bebas Neue",
+          "fontFamily": "\"Bebas Neue\", \"Arial Narrow\", sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Bebas Neue",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [ "file:./assets/fonts/bebas-neue-v16-latin-regular.woff2" ]
+            }
+          ]
+        },
+        {
+          "slug": "body",
+          "name": "Inter",
+          "fontFamily": "\"Inter\", system-ui, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Inter",
+              "fontWeight": "100 900",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [ "file:./assets/fonts/inter-v20-latin-variable.woff2" ]
+            }
+          ]
+        }
+      ],
+      "fontSizes": [
+        { "slug": "eyebrow", "name": "Eyebrow", "size": "0.8125rem" },
+        { "slug": "body", "name": "Body", "size": "1rem" },
+        { "slug": "h3", "name": "Heading 3", "size": "1.375rem" },
+        { "slug": "h2", "name": "Heading 2", "size": "clamp(1.75rem, 3.5vw, 2.5rem)" },
+        { "slug": "hero", "name": "Hero", "size": "clamp(2.5rem, 6vw, 4.5rem)" }
+      ]
+    },
+    "spacing": {
+      "units": [ "px", "rem", "vw", "%" ],
+      "spacingSizes": [
+        { "slug": "gutter", "name": "Gutter", "size": "clamp(1rem, 4vw, 2.5rem)" },
+        { "slug": "band", "name": "Band", "size": "clamp(3rem, 8vw, 6rem)" }
+      ]
+    },
+    "border": {
+      "radius": true
+    },
+    "custom": {
+      "radiusBtn": "8px",
+      "measure": "34rem",
+      "trackEyebrow": "0.08em",
+      "lhTight": "1.05",
+      "lhBody": "1.6"
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--cream)",
+      "text": "var(--wp--preset--color--text-on-light)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--body)",
+      "fontSize": "var(--wp--preset--font-size--body)",
+      "lineHeight": "var(--wp--custom--lh-body)"
+    },
+    "elements": {
+      "link": {
+        "color": { "text": "var(--wp--preset--color--accent)" },
+        ":hover": { "color": { "text": "var(--wp--preset--color--accent-hover)" } }
+      },
+      "heading": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--display)",
+          "textTransform": "uppercase",
+          "lineHeight": "var(--wp--custom--lh-tight)"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var(--wp--preset--color--accent)",
+          "text": "var(--wp--preset--color--paper)"
+        },
+        "border": { "radius": "var(--wp--custom--radius-btn)" },
+        ":hover": {
+          "color": { "background": "var(--wp--preset--color--accent-hover)" }
+        }
+      }
+    }
+  },
+  "templateParts": [
+    { "name": "header", "area": "header" },
+    { "name": "footer", "area": "footer" }
+  ]
+}

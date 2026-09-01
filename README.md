@@ -17,6 +17,8 @@ design-system/
   mockups/                     Approved homepage mockups (PNG/JPG) + *-preview.html wrappers
 sites/
   robin-guitars/CLAUDE.md      WP block theme rules, homepage build order, content inventory
+  robin-guitars/theme/robin-2026/   Block theme in progress (homepage patterns; placeholder photography)
+  robin-guitars/preview/       Static QA mirror of the theme's homepage output
   steamboat-amps/CLAUDE.md     Same, plus repairs-page emphasis and asset-purge rules
   rio-grande/CLAUDE.md         Stencil workflow, store-safety rules, two-phase plan
 scripts/

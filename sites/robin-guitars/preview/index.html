@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>QA preview — robin-2026 theme (not the deliverable)</title>
+<meta name="robots" content="noindex">
+<style>
+  /* Hand-written shim for the CSS custom properties WordPress core
+     normally generates from theme.json at runtime. Not part of the
+     theme — only exists so this static QA page can render the theme's
+     own style.css without a live WP instance (blocked in this sandbox:
+     wordpress.org and Docker are both unreachable here). */
+  @font-face {
+    font-family: "Bebas Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../theme/robin-2026/assets/fonts/bebas-neue-v16-latin-regular.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("../theme/robin-2026/assets/fonts/inter-v20-latin-variable.woff2") format("woff2-variations");
+  }
+  :root {
+    --wp--preset--color--ink: #111111;
+    --wp--preset--color--ink-soft: #241e19;
+    --wp--preset--color--cream: #f5f1e8;
+    --wp--preset--color--paper: #ffffff;
+    --wp--preset--color--accent: #c66a2a;
+    --wp--preset--color--accent-hover: #a25722;
+    --wp--preset--color--accent-soft: #e0ad8a;
+    --wp--preset--color--copper: #c4421a;
+    --wp--preset--color--walnut: #4a3628;
+    --wp--preset--color--brass: #9c7a41;
+    --wp--preset--color--text-on-light: #231d17;
+    --wp--preset--color--text-muted-dark: #b9aea2;
+    --wp--preset--color--text-muted-light: #6f655a;
+    --wp--preset--font-family--display: "Bebas Neue", "Arial Narrow", sans-serif;
+    --wp--preset--font-family--body: "Inter", system-ui, sans-serif;
+    --wp--preset--font-size--eyebrow: 0.8125rem;
+    --wp--preset--font-size--body: 1rem;
+    --wp--preset--font-size--h3: 1.375rem;
+    --wp--preset--font-size--h2: clamp(1.75rem, 3.5vw, 2.5rem);
+    --wp--preset--font-size--hero: clamp(2.5rem, 6vw, 4.5rem);
+    --wp--preset--spacing--gutter: clamp(1rem, 4vw, 2.5rem);
+    --wp--preset--spacing--band: clamp(3rem, 8vw, 6rem);
+    --wp--custom--radius-btn: 8px;
+    --wp--custom--measure: 34rem;
+    --wp--custom--track-eyebrow: 0.08em;
+    --wp--custom--lh-tight: 1.05;
+    --wp--custom--lh-body: 1.6;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--wp--preset--color--cream); color: var(--wp--preset--color--text-on-light); font-family: var(--wp--preset--font-family--body); line-height: var(--wp--custom--lh-body); }
+  h1, h2, h3 { font-family: var(--wp--preset--font-family--display); text-transform: uppercase; line-height: var(--wp--custom--lh-tight); margin: 0 0 0.5em; }
+  a { color: var(--wp--preset--color--accent); }
+  .wrap { max-width: 90rem; margin: 0 auto; padding: 0 var(--wp--preset--spacing--gutter); }
+  .band-pad { padding-top: var(--wp--preset--spacing--band); padding-bottom: var(--wp--preset--spacing--band); }
+  header.site-header { background: var(--wp--preset--color--ink); color: var(--wp--preset--color--paper); padding: 1rem var(--wp--preset--spacing--gutter); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  header.site-header .site-title { font-family: var(--wp--preset--font-family--display); text-transform: uppercase; font-size: 1.75rem; }
+  header.site-header nav { display: flex; gap: 1.5rem; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.04em; }
+  header.site-header nav a { color: var(--wp--preset--color--paper); text-decoration: none; }
+  .wp-block-buttons .wp-block-button__link { display: inline-block; background: var(--wp--preset--color--accent); color: var(--wp--preset--color--paper); border-radius: var(--wp--custom--radius-btn); padding: 0.75em 1.6em; text-decoration: none; font-weight: 600; }
+  .cols { display: flex; gap: 2rem; flex-wrap: wrap; align-items: center; }
+  .cols > div { flex: 1 1 20rem; }
+  .qa-flag { background: #ffe8b0; color: #4a3628; font-size: 0.75rem; padding: 0.15rem 0.5rem; border-radius: 4px; font-family: var(--wp--preset--font-family--body); text-transform: none; letter-spacing: normal; }
+</style>
+</head>
+<body>
+
+<p style="background:#4a3628;color:#f5f1e8;text-align:center;padding:0.5rem;font-size:0.8rem;margin:0">QA preview only — mirrors sites/robin-guitars/theme/robin-2026 markup for visual review. Not a live WordPress render (wordpress.org + Docker are both blocked in this sandbox).</p>
+
+<link rel="stylesheet" href="../theme/robin-2026/style.css">
+
+<header class="site-header">
+  <span class="site-title">Robin Guitars</span>
+  <nav>
+    <a href="/guitars/">Guitars</a>
+    <a href="/history/">History</a>
+    <a href="/artist/">Artist</a>
+    <a href="/guitar-gallery/">Galleries</a>
+    <a href="/contact/">Contact Us</a>
+  </nav>
+</header>
+
+<section class="rg-hero" style="display:grid;grid-template-columns:1fr 1fr">
+  <div class="band-pad" style="padding-left:var(--wp--preset--spacing--gutter);padding-right:var(--wp--preset--spacing--gutter)">
+    <h1>Built one<br>at a time.<br><span style="color:var(--wp--preset--color--accent)">Played for<br>a lifetime.</span></h1>
+    <p class="rg-intro">Robin Guitars are made for players who demand tone, feel, and attitude.</p>
+    <div class="wp-block-buttons"><a class="wp-block-button__link" href="/guitars/">Explore our Guitars</a></div>
+    <p class="rg-texas-lockup">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M40 8 L78 8 L78 22 L96 22 L98 34 L108 40 L104 52 L92 56 L90 70 L78 90 L66 112 L52 108 L38 90 L26 74 L18 48 L24 28 L34 22 Z"/></svg>
+      Hand Crafted in<br>Houston, Texas
+    </p>
+  </div>
+  <div class="rg-hero__media">
+    <img src="../theme/robin-2026/assets/img/hero-avalon-placeholder.jpg" alt="Robin Guitars Avalon">
+    <div class="rg-model-chip"><span class="rg-model-chip__label">Model Shown</span>Avalon</div>
+  </div>
+</section>
+
+<nav class="rg-model-grid" aria-label="Robin Guitars models">
+  <a class="rg-model-card" href="/avalon/"><img src="../theme/robin-2026/assets/img/model-avalon-placeholder.jpg" alt="Avalon"><h3>Avalon</h3><p>Classic Versatility</p></a>
+  <a class="rg-model-card" href="/machete/"><img src="../theme/robin-2026/assets/img/model-machete-placeholder.jpg" alt="Machete"><h3>Machete</h3><p>Modern Edge</p></a>
+  <a class="rg-model-card" href="/medley/"><img src="../theme/robin-2026/assets/img/model-medley-placeholder.jpg" alt="Medley"><h3>Medley</h3><p>Bold &amp; Powerful</p></a>
+  <a class="rg-model-card" href="/ranger/"><img src="../theme/robin-2026/assets/img/model-ranger-placeholder.jpg" alt="Ranger"><h3>Ranger</h3><p>Vintage Soul</p></a>
+  <a class="rg-model-card" href="/rawhide/"><img src="../theme/robin-2026/assets/img/model-rawhide-placeholder.jpg" alt="Rawhide"><h3>Rawhide</h3><p>Distinct Flair</p></a>
+  <a class="rg-model-card" href="/savoy/"><img src="../theme/robin-2026/assets/img/model-savoy-placeholder.jpg" alt="Savoy"><h3>Savoy</h3><p>Large Body Sound</p></a>
+</nav>
+
+<section class="rg-band rg-band--dark">
+  <div class="wrap">
+    <p class="rg-eyebrow-rule">Artist Spotlight</p>
+    <div class="cols">
+      <div style="flex-basis:36%"><h2>For those who <span style="color:var(--wp--preset--color--accent)">refuse</span> to sound like everyone else.</h2></div>
+      <div style="flex-basis:22%"><img src="../theme/robin-2026/assets/img/artist-mat-mitchell-placeholder.jpg" alt="Mat Mitchell" style="width:100%;display:block"><p style="font-size:0.6875rem;color:var(--wp--preset--color--text-muted-dark)">Photo: Michelle Shiers</p></div>
+      <div style="flex-basis:36%">
+        <p style="font-family:var(--wp--preset--font-family--display);text-transform:uppercase;letter-spacing:0.04em">Mat Mitchell Machete</p>
+        <p>Announcing the launch of our retro-futuristic <a href="/machete/">Machete</a> guitar in a new artist collaboration with Puscifer guitarist and producer <strong>Mat Mitchell</strong>.</p>
+        <p><a href="https://guitarpr.com/robin-guitars-launches-mat-mitchell-signature-machete/">Read the press release &rarr;</a></p>
+        <p style="font-size:0.75rem;color:var(--wp--preset--color--text-muted-dark)">Machete wordmark: Ken Taylor</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rg-band rg-band--dark">
+  <div class="wrap cols">
+    <div style="flex-basis:38%">
+      <p class="rg-eyebrow-rule">Great Tone Starts Here.</p>
+      <h3>Rio Grande Pickups</h3>
+      <p>Handcrafted to help musicians find the tone that is uniquely their own.</p>
+      <div class="wp-block-buttons"><a class="wp-block-button__link" href="https://www.riograndepickups.com/">15% off special</a></div>
+      <p><span class="qa-flag">unconfirmed offer — DECISIONS.md #5</span></p>
+    </div>
+    <div style="flex-basis:58%"><img src="../theme/robin-2026/assets/img/cross-promo-riogrande-placeholder.jpg" alt="Rio Grande pickups" style="width:100%;display:block"></div>
+  </div>
+</section>
+
+<section class="rg-band rg-band--dark">
+  <div class="wrap cols">
+    <div style="flex-basis:38%">
+      <p class="rg-eyebrow-rule">Built Different. Played Loud.</p>
+      <h3>Steamboat Amps</h3>
+      <p>For musicians who believe great sound should have as much character as the people playing through it.</p>
+      <div class="wp-block-buttons"><a class="wp-block-button__link" href="https://www.steamboatamps.com/">Learn More</a></div>
+    </div>
+    <div style="flex-basis:58%"><img src="../theme/robin-2026/assets/img/cross-promo-steamboat-placeholder.jpg" alt="Steamboat amp" style="width:100%;display:block"></div>
+  </div>
+</section>
+
+<section class="rg-band rg-band--dark">
+  <div class="wrap">
+    <p class="rg-eyebrow-rule">Follow us @robinguitars on Instagram</p>
+    <p class="qa-flag">[instagram-feed] shortcode renders here via Smash Balloon — not reproducible in a static preview</p>
+  </div>
+</section>
+
+<section class="rg-band rg-band--dark">
+  <div class="wrap cols">
+    <div style="flex-basis:42%">
+      <p class="rg-eyebrow-rule">Stay in Tune.</p>
+      <h3>Join the Robin Guitars family</h3>
+      <p>Get the latest on new models, new artists, events, and behind-the-scenes content.</p>
+    </div>
+    <div style="flex-basis:52%">
+      <form style="display:flex;gap:0.5rem;flex-wrap:wrap">
+        <input type="email" placeholder="Your email address" style="flex:1 1 16rem;padding:0.75em 1em;border-radius:8px;border:1px solid var(--wp--preset--color--text-muted-dark);background:transparent;color:inherit">
+        <button class="wp-block-button__link" style="border:none;font-family:inherit;font-size:1rem;cursor:pointer">Sign Up</button>
+      </form>
+      <p class="rg-placeholder-flag">Not wired to an email service yet.</p>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--wp--preset--color--ink);color:var(--wp--preset--color--text-muted-dark);padding:var(--wp--preset--spacing--band) var(--wp--preset--spacing--gutter) var(--wp--preset--spacing--gutter)">
+  <div class="cols" style="justify-content:space-between">
+    <p style="font-family:var(--wp--preset--font-family--display);text-transform:uppercase"><a href="https://www.robinguitars.com/" style="color:inherit">Robin Guitars</a></p>
+    <p style="font-family:var(--wp--preset--font-family--display);text-transform:uppercase"><a href="https://www.riograndepickups.com/" style="color:inherit">Rio Grande Pickups</a></p>
+    <p style="font-family:var(--wp--preset--font-family--display);text-transform:uppercase"><a href="https://www.steamboatamps.com/" style="color:inherit">Steamboat Amps</a></p>
+    <p style="font-family:var(--wp--preset--font-family--display);text-transform:uppercase"><a href="https://www.bigtexguitar.com/" style="color:inherit">Big Tex</a></p>
+  </div>
+  <hr style="border-color:var(--wp--preset--color--ink-soft);margin:2rem 0">
+  <p style="font-size:0.875rem">(713) 957-0470 &middot; 3526 E TC Jester Blvd, Houston, Texas 77018 &middot; <a href="mailto:sales@robinguitars.com" style="color:inherit">sales@robinguitars.com</a></p>
+</footer>
+
+</body>
+</html>

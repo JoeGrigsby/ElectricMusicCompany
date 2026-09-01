@@ -11,9 +11,35 @@ content, pricing, or legal matters. Mark resolved items with the answer + date.
 2. **[OPEN] Mockup files.** Final PNGs (or Figma) for all three homepages into
    `design-system/mockups/` as robin-home.png, steamboat-home.png,
    riogrande-home.png.
-4. **[OPEN] Robin/Steamboat platform confirmation.** Spec recommends staying on
-   WordPress with new block themes (staff keep editing; forms/IG keep working).
-   Confirm, or switch plan to static (Astro) per BUILD_SPEC.md §2 Option B.
+11. **[OPEN] Robin real photography + model-photo mapping.** The Robin theme
+    build (`sites/robin-guitars/theme/robin-2026/`) currently uses temporary
+    crops from `design-system/mockups/robin-home.jpg` for the hero, the six
+    model-strip thumbnails, the artist-spotlight photo, and the two
+    cross-promo band photos — see the `-placeholder.jpg` filenames in
+    `theme/robin-2026/assets/img/`. Real photos were shared in chat but
+    could not be saved (pasted images aren't accessible as files in this
+    environment) — they need to arrive as actual file attachments (or a
+    zip) before they can replace the placeholders. Once they land, confirm
+    which photo is which of the six models (Avalon / Machete / Medley /
+    Ranger / Rawhide / Savoy) before wiring them in — do not guess.
+12. **[OPEN] Hero model: Avalon vs. Savoy.** The approved mockup's hero photo
+    is captioned "MODEL SHOWN: Savoy Classic," but that photo is visibly the
+    same guitar as the Avalon thumbnail in the model strip (amber quilted
+    single-cut), not the Savoy thumbnail (blue full-hollow body) — looks
+    like a mislabel in the mockup itself. The theme build shipped with the
+    hero chip corrected to read "Avalon" (matching the actual photo) rather
+    than the mockup's literal "Savoy Classic" text. Confirm this call, or
+    supply a real Savoy photo for the hero instead.
+
+## Platform
+
+4. **[RESOLVED] Robin/Steamboat platform.** WordPress block themes (owner
+   choice, Sept 2026) — not static. Blocked in practice on #1 (WP admin
+   access + DB export) and on live WP itself: this sandbox cannot reach
+   `wordpress.org` or run Docker, so the Robin theme below has been built
+   and statically validated (PHP lint, valid `theme.json`) but never
+   rendered inside real WordPress. Verify in a real `wp-env`/hosting
+   environment before launch.
 
 ## Content questions
 
@@ -44,6 +70,9 @@ content, pricing, or legal matters. Mark resolved items with the answer + date.
   `tokens.css` via `@font-face`; each site copies them into its own theme
   assets at build time per the self-hosted-assets rule. `tokens.css` /
   `tokens.json` updated accordingly. (Resolved by owner, Sept 2026.)
+- **Nav typo.** The approved mockup's Robin header reads "GALLARIES" —
+  corrected to "Galleries" in the built theme nav; flagging since it's a
+  copy fix, not a design change. (Sept 2026.)
 - **Palette confirmed.** Bone White `#F5F1E8` (background), Carbon Black
   `#111111` (dark/stage), Burnt Orange `#C66A2A` (signature accent),
   Copper `#C4421A` (Rio Grande pickup windings / family connection),

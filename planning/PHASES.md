@@ -17,10 +17,17 @@ screenshots/diffs to the owner before continuing.
       every token + shared component; screenshot-approve before porting anywhere.
 
 ## Phase 1 — Robin Guitars homepage + theme shell
-- [ ] wp-env running with live content export.
-- [ ] Block theme scaffold, theme.json from tokens.json, header/footer patterns.
-- [ ] Homepage sections 1–8 per sites/robin-guitars/CLAUDE.md.
-- [ ] Review gate: side-by-side vs mockup, mobile + desktop.
+- [ ] wp-env running with live content export — blocked: this sandbox can't
+      reach wordpress.org or run Docker; needs a real WP environment.
+- [x] Block theme scaffold, theme.json from tokens.json, header/footer
+      patterns — `sites/robin-guitars/theme/robin-2026/`. PHP-linted and
+      `theme.json`-validated only; never rendered in live WordPress (see
+      DECISIONS.md #4).
+- [x] Homepage sections 1–8 per sites/robin-guitars/CLAUDE.md — built as
+      block patterns with placeholder photography (DECISIONS.md #11, #12).
+- [x] Review gate: side-by-side vs mockup, mobile + desktop — via a static
+      QA mirror (`sites/robin-guitars/preview/index.html`) since live
+      WordPress isn't reachable here; screenshotted at 390px and 1280px.
 
 ## Phase 2 — Robin interior pages + launch prep
 - [ ] 6 model pages, History, Artists, galleries, vintage catalogs, contact/quote.
