@@ -1,12 +1,15 @@
 <?php
 /**
  * Homepage hero. Photo is a temporary crop from the approved mockup
- * (design-system/mockups/robin-home.jpg) — replace with real Avalon
- * photography. See planning/DECISIONS.md for the Avalon/Savoy label note.
+ * (design-system/mockups/robin-home.jpg) — replace with real Savoy Classic
+ * photography.
  *
  * Full-bleed background-image hero (owner request, Sept 2026) — photo
- * fills the section, text sits on top over a left-to-right scrim for
- * legibility.
+ * sits on top over a left-to-right scrim for legibility, fit (not
+ * cropped) and anchored right so the whole guitar stays visible.
+ * "MODEL SHOWN: Savoy Classic" kept per owner instruction even though
+ * the placeholder photo is actually the Avalon body shape — see
+ * DECISIONS.md #12.
  */
 $hero_img       = esc_url( get_theme_file_uri( 'assets/img/hero-avalon-placeholder.jpg' ) );
 $hand_crafted_tx = esc_url( get_theme_file_uri( 'assets/img/hand-crafted-tx.png' ) );
@@ -28,7 +31,7 @@ return array(
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"className":"rg-intro"} -->
-		<p class="rg-intro">Robin Guitars are made for players who demand tone, feel, and attitude.</p>
+		<p class="rg-intro">Robin Guitars are made for players who<br>demand tone, feel, and attitude.</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons -->
@@ -50,7 +53,7 @@ return array(
 
 	<div class="rg-model-chip">
 		<span class="rg-model-chip__label">Model Shown</span>
-		Avalon
+		Savoy Classic
 	</div>
 
 </section>

@@ -22,14 +22,6 @@ content, pricing, or legal matters. Mark resolved items with the answer + date.
     zip) before they can replace the placeholders. Once they land, confirm
     which photo is which of the six models (Avalon / Machete / Medley /
     Ranger / Rawhide / Savoy) before wiring them in — do not guess.
-12. **[OPEN] Hero model: Avalon vs. Savoy.** The approved mockup's hero photo
-    is captioned "MODEL SHOWN: Savoy Classic," but that photo is visibly the
-    same guitar as the Avalon thumbnail in the model strip (amber quilted
-    single-cut), not the Savoy thumbnail (blue full-hollow body) — looks
-    like a mislabel in the mockup itself. The theme build shipped with the
-    hero chip corrected to read "Avalon" (matching the actual photo) rather
-    than the mockup's literal "Savoy Classic" text. Confirm this call, or
-    supply a real Savoy photo for the hero instead.
 
 ## Platform
 
@@ -70,6 +62,12 @@ content, pricing, or legal matters. Mark resolved items with the answer + date.
   `tokens.css` via `@font-face`; each site copies them into its own theme
   assets at build time per the self-hosted-assets rule. `tokens.css` /
   `tokens.json` updated accordingly. (Resolved by owner, Sept 2026.)
+- **Hero model label: "Savoy Classic."** The hero chip reads "Savoy
+  Classic" per the mockup's literal text, even though the placeholder
+  photo is actually the Avalon body shape — owner overruled the earlier
+  "correct it to Avalon" call. Swap this note out once real Savoy
+  photography lands and the hero photo actually matches the label.
+  (Owner, Sept 2026.)
 - **Nav typo.** The approved mockup's Robin header reads "GALLARIES" —
   corrected to "Galleries" in the built theme nav; flagging since it's a
   copy fix, not a design change. (Sept 2026.)

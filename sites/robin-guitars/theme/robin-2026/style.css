@@ -91,8 +91,9 @@ Text Domain: robin-2026
   position: relative;
   min-height: 34rem;
   background-color: var(--wp--preset--color--ink);
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
   color: var(--wp--preset--color--paper);
   display: flex;
   align-items: center;
@@ -120,13 +121,34 @@ Text Domain: robin-2026
   margin: 0 0 0.5em;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
-.rg-hero h1 .is-accent { color: var(--wp--preset--color--accent); }
+.rg-hero h1 .is-accent {
+  color: color-mix(in srgb, var(--wp--preset--color--accent) 80%, white);
+}
 .rg-hero p.rg-intro {
   max-width: var(--wp--custom--measure);
-  color: var(--wp--preset--color--text-muted-dark);
+  color: var(--wp--preset--color--paper);
+}
+.rg-hero .rg-texas-lockup-img {
+  margin-top: 1.5rem;
 }
 .rg-hero .rg-model-chip {
   z-index: 1;
+}
+@media (max-width: 600px) {
+  .rg-hero {
+    min-height: 0;
+    background-size: cover;
+    background-position: right top;
+  }
+  .rg-hero__scrim {
+    background: linear-gradient(
+      180deg,
+      var(--wp--preset--color--ink) 0%,
+      var(--wp--preset--color--ink) 38%,
+      color-mix(in srgb, var(--wp--preset--color--ink) 55%, transparent) 62%,
+      color-mix(in srgb, var(--wp--preset--color--ink) 20%, transparent) 100%
+    );
+  }
 }
 
 .rg-model-grid {
