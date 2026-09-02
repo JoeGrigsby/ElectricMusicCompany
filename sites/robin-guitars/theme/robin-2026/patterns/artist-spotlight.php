@@ -1,8 +1,9 @@
 <?php
 /**
- * Mat Mitchell / Machete artist spotlight. Photo credit Michelle Shiers,
- * Machete wordmark logo credit Ken Taylor — keep both credits per
- * sites/robin-guitars/CLAUDE.md.
+ * Mat Mitchell / Machete artist spotlight. Credit captions (photo:
+ * Michelle Shiers, wordmark: Ken Taylor) removed from the page per owner
+ * instruction, Sept 2026 — overrides sites/robin-guitars/CLAUDE.md's
+ * "keep both credits" note. See planning/DECISIONS.md.
  */
 $photo = esc_url( get_theme_file_uri( 'assets/img/artist-mat-mitchell.jpg' ) );
 $logo  = esc_url( get_theme_file_uri( 'assets/img/mat-mitchell-machete-logo.png' ) );
@@ -34,7 +35,6 @@ return array(
 			<!-- wp:image {"sizeSlug":"large"} -->
 			<figure class="wp-block-image size-large">
 				<img src="' . $photo . '" alt="Mat Mitchell playing a Robin Machete" />
-				<figcaption class="wp-element-caption" style="font-size:0.6875rem">Photo: Michelle Shiers</figcaption>
 			</figure>
 			<!-- /wp:image -->
 		</div>
@@ -55,10 +55,6 @@ return array(
 
 			<!-- wp:paragraph -->
 			<p><a href="https://guitarpr.com/robin-guitars-launches-mat-mitchell-signature-machete/">Read the press release &rarr;</a></p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.75rem"}},"textColor":"text-muted-dark"} -->
-			<p class="has-text-muted-dark-color has-text-color" style="font-size:0.75rem">Machete wordmark: Ken Taylor</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->

@@ -226,11 +226,16 @@ Text Domain: robin-2026
 }
 
 .rg-band.rg-spotlight-section {
-  padding-top: clamp(1.5rem, 3vw, 2.5rem);
-  padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  padding-top: clamp(0.5rem, 1vw, 1rem);
+  padding-bottom: clamp(0.5rem, 1vw, 1rem);
+}
+.rg-spotlight-section .rg-eyebrow-rule {
+  color: #ed702d;
+  font-size: 1.25rem;
+  margin: 0;
 }
 .rg-spotlight {
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
   flex-wrap: nowrap;
 }
 .rg-spotlight__headline h2 {

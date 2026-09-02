@@ -74,6 +74,13 @@ content, pricing, or legal matters. Mark resolved items with the answer + date.
   Machete wordmark logo (`mat-mitchell-machete-logo.png`, credit Ken
   Taylor) wired into the theme, replacing the placeholder crop and
   text badge. (Sept 2026.)
+- **Credit captions removed.** "Photo: Michelle Shiers" and "Machete
+  wordmark: Ken Taylor" captions taken off the artist-spotlight section
+  per owner instruction — overrides the "keep both credits" note this
+  file carried earlier and the root CLAUDE.md build-order note for this
+  section. If credit is still contractually required, it needs to live
+  somewhere else (e.g. a page footer/credits line) rather than inline
+  here. (Owner, Sept 2026.)
 - **Nav typo.** The approved mockup's Robin header reads "GALLARIES" —
   corrected to "Galleries" in the built theme nav; flagging since it's a
   copy fix, not a design change. (Sept 2026.)
