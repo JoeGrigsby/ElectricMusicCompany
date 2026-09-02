@@ -32,6 +32,15 @@ Text Domain: robin-2026
   stroke-width: 3;
 }
 
+.rg-texas-lockup-img {
+  margin: 0;
+}
+.rg-texas-lockup-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .rg-model-chip {
   position: absolute;
   right: 1.5rem;

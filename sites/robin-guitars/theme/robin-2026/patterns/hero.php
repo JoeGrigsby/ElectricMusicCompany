@@ -6,10 +6,10 @@
  *
  * Full-bleed background-image hero (owner request, Sept 2026) — photo
  * fills the section, text sits on top over a left-to-right scrim for
- * legibility. Texas lockup is a placeholder icon+text pending the real
- * Hand_Crafted_TX.png (DECISIONS.md).
+ * legibility.
  */
-$hero_img = esc_url( get_theme_file_uri( 'assets/img/hero-avalon-placeholder.jpg' ) );
+$hero_img       = esc_url( get_theme_file_uri( 'assets/img/hero-avalon-placeholder.jpg' ) );
+$hand_crafted_tx = esc_url( get_theme_file_uri( 'assets/img/hand-crafted-tx.png' ) );
 
 return array(
 	'title'      => __( 'Robin Hero', 'robin-2026' ),
@@ -39,12 +39,11 @@ return array(
 		</div>
 		<!-- /wp:buttons -->
 
-		<!-- wp:html -->
-		<p class="rg-texas-lockup">
-			<svg viewBox="0 0 120 120" aria-hidden="true"><path d="M40 8 L78 8 L78 22 L96 22 L98 34 L108 40 L104 52 L92 56 L90 70 L78 90 L66 112 L52 108 L38 90 L26 74 L18 48 L24 28 L34 22 Z"/></svg>
-			Hand Crafted in<br>Houston, Texas
-		</p>
-		<!-- /wp:html -->
+		<!-- wp:image {"width":"11rem","className":"rg-texas-lockup-img"} -->
+		<figure class="wp-block-image rg-texas-lockup-img" style="width:11rem">
+			<img src="' . $hand_crafted_tx . '" alt="Hand Crafted in Houston, Texas" />
+		</figure>
+		<!-- /wp:image -->
 
 	</div>
 	<!-- /wp:group -->
