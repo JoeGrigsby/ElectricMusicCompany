@@ -15,15 +15,15 @@ return array(
 <!-- wp:group {"tagName":"section","className":"rg-band rg-band--dark rg-spotlight-section","layout":{"type":"constrained","contentSize":"110rem"}} -->
 <section class="wp-block-group rg-band rg-band--dark rg-spotlight-section">
 
-	<!-- wp:html -->
-	<p class="rg-eyebrow-rule">Artist Spotlight</p>
-	<!-- /wp:html -->
-
 	<!-- wp:columns {"className":"rg-spotlight"} -->
 	<div class="wp-block-columns rg-spotlight">
 
 		<!-- wp:column {"width":"22%","className":"rg-spotlight__headline"} -->
 		<div class="wp-block-column rg-spotlight__headline" style="flex-basis:22%;flex-grow:0;flex-shrink:0">
+			<!-- wp:html -->
+			<p class="rg-eyebrow-rule">Artist Spotlight</p>
+			<!-- /wp:html -->
+
 			<!-- wp:heading {"level":2} -->
 			<h2>For those who <span class="is-accent">refuse</span> to sound like everyone else.</h2>
 			<!-- /wp:heading -->
