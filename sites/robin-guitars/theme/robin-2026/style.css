@@ -125,17 +125,16 @@ Text Domain: robin-2026
 .rg-hero__scrim {
   position: absolute;
   inset: 0;
-  /* A uniform wash (never below ~30% ink, even at the far right/bottom)
-     keeps the whole hero reading black rather than the photo's natural
-     warm brown, on top of the stronger left-to-right gradient that
-     keeps the headline legible. */
+  /* Darkening halved from the previous pass (owner: image reads too
+     dark/muddy) so more of the photo's actual brightness comes through,
+     while still giving the headline enough contrast to read. */
   background:
     linear-gradient(
       90deg,
-      var(--wp--preset--color--ink) 0%,
-      color-mix(in srgb, var(--wp--preset--color--ink) 92%, transparent) 25%,
-      color-mix(in srgb, var(--wp--preset--color--ink) 75%, transparent) 50%,
-      color-mix(in srgb, var(--wp--preset--color--ink) 55%, transparent) 100%
+      color-mix(in srgb, var(--wp--preset--color--ink) 50%, transparent) 0%,
+      color-mix(in srgb, var(--wp--preset--color--ink) 46%, transparent) 25%,
+      color-mix(in srgb, var(--wp--preset--color--ink) 38%, transparent) 50%,
+      color-mix(in srgb, var(--wp--preset--color--ink) 28%, transparent) 100%
     );
 }
 .rg-hero__content {
@@ -174,10 +173,10 @@ Text Domain: robin-2026
   .rg-hero__scrim {
     background: linear-gradient(
       180deg,
-      var(--wp--preset--color--ink) 0%,
-      var(--wp--preset--color--ink) 38%,
-      color-mix(in srgb, var(--wp--preset--color--ink) 60%, transparent) 62%,
-      color-mix(in srgb, var(--wp--preset--color--ink) 32%, transparent) 100%
+      color-mix(in srgb, var(--wp--preset--color--ink) 55%, transparent) 0%,
+      color-mix(in srgb, var(--wp--preset--color--ink) 55%, transparent) 38%,
+      color-mix(in srgb, var(--wp--preset--color--ink) 30%, transparent) 62%,
+      color-mix(in srgb, var(--wp--preset--color--ink) 16%, transparent) 100%
     );
   }
 }
