@@ -13,6 +13,16 @@ Text Domain: robin-2026
 
 /* Block-specific styles that don't fit theme.json presets live here. */
 
+.rg-logo {
+  display: block;
+  line-height: 0;
+}
+.rg-logo img {
+  height: 2.5rem;
+  width: auto;
+  display: block;
+}
+
 .rg-texas-lockup {
   display: flex;
   align-items: center;

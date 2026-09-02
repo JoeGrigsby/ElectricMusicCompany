@@ -26,6 +26,7 @@ add_action( 'after_setup_theme', 'robin2026_setup' );
 
 function robin2026_register_block_patterns() {
 	$patterns = array(
+		'robin2026/header'            => __DIR__ . '/patterns/header.php',
 		'robin2026/hero'              => __DIR__ . '/patterns/hero.php',
 		'robin2026/model-strip'       => __DIR__ . '/patterns/model-strip.php',
 		'robin2026/artist-spotlight'  => __DIR__ . '/patterns/artist-spotlight.php',

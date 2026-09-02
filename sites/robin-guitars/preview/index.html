@@ -61,6 +61,8 @@
   .band-pad { padding-top: var(--wp--preset--spacing--band); padding-bottom: var(--wp--preset--spacing--band); }
   header.site-header { background: var(--wp--preset--color--ink); color: var(--wp--preset--color--paper); padding: 1rem var(--wp--preset--spacing--gutter); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
   header.site-header .site-title { font-family: var(--wp--preset--font-family--display); text-transform: uppercase; font-size: 1.75rem; }
+  .rg-logo { display: block; line-height: 0; }
+  .rg-logo img { height: 2.5rem; width: auto; display: block; }
   header.site-header nav { display: flex; gap: 1.5rem; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.04em; }
   header.site-header nav a { color: var(--wp--preset--color--paper); text-decoration: none; }
   .wp-block-buttons .wp-block-button__link { display: inline-block; background: var(--wp--preset--color--accent); color: var(--wp--preset--color--paper); border-radius: var(--wp--custom--radius-btn); padding: 0.75em 1.6em; text-decoration: none; font-weight: 600; }
@@ -76,7 +78,7 @@
 <link rel="stylesheet" href="../theme/robin-2026/style.css">
 
 <header class="site-header">
-  <span class="site-title">Robin Guitars</span>
+  <a href="/" class="rg-logo" aria-label="Robin Guitars home"><img src="../theme/robin-2026/assets/img/robin-logo.png" alt="Robin Guitars"></a>
   <nav>
     <a href="/guitars/">Guitars</a>
     <a href="/history/">History</a>
