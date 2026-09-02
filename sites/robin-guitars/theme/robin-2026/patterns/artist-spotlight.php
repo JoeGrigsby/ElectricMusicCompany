@@ -16,19 +16,19 @@ return array(
 	<p class="rg-eyebrow-rule">Artist Spotlight</p>
 	<!-- /wp:html -->
 
-	<!-- wp:columns {"verticalAlignment":"center"} -->
-	<div class="wp-block-columns are-vertically-aligned-center">
+	<!-- wp:columns {"verticalAlignment":"center","className":"rg-spotlight"} -->
+	<div class="wp-block-columns are-vertically-aligned-center rg-spotlight">
 
-		<!-- wp:column {"verticalAlignment":"center","width":"38%"} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:38%">
+		<!-- wp:column {"verticalAlignment":"center","width":"26%","className":"rg-spotlight__headline"} -->
+		<div class="wp-block-column is-vertically-aligned-center rg-spotlight__headline" style="flex-basis:26%;flex-grow:0;flex-shrink:0">
 			<!-- wp:heading {"level":2} -->
 			<h2>For those who <span style="color:var(--wp--preset--color--accent)">refuse</span> to sound like everyone else.</h2>
 			<!-- /wp:heading -->
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"width":"24%"} -->
-		<div class="wp-block-column" style="flex-basis:24%">
+		<!-- wp:column {"width":"20%"} -->
+		<div class="wp-block-column" style="flex-basis:20%;flex-grow:0;flex-shrink:0">
 			<!-- wp:image {"sizeSlug":"large"} -->
 			<figure class="wp-block-image size-large">
 				<img src="' . esc_url( get_theme_file_uri( 'assets/img/artist-mat-mitchell-placeholder.jpg' ) ) . '" alt="Mat Mitchell playing a Robin Machete" />
@@ -38,15 +38,15 @@ return array(
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"verticalAlignment":"center","width":"38%"} -->
-		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:38%">
-			<!-- wp:paragraph -->
-			<p style="font-family:var(--wp--preset--font-family--display);text-transform:uppercase;letter-spacing:0.04em">Mat Mitchell Machete</p>
-			<!-- /wp:paragraph -->
+		<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%;flex-grow:0;flex-shrink:0">
 
-			<!-- wp:paragraph -->
-			<p>Announcing the launch of our retro-futuristic <a href="/machete/" style="color:var(--wp--preset--color--accent)">Machete</a> guitar in a new artist collaboration with Puscifer guitarist and producer <strong>Mat Mitchell</strong>.</p>
-			<!-- /wp:paragraph -->
+			<!-- wp:html -->
+			<div class="rg-spotlight__badge-row">
+				<p class="rg-spotlight__badge">Mat Mitchell<br>Machete</p>
+				<p class="rg-spotlight__copy">Announcing the launch of our retro-futuristic <a href="/machete/" style="color:var(--wp--preset--color--accent)">Machete</a> guitar in a new artist collaboration with Puscifer guitarist and producer <strong>Mat Mitchell</strong>.</p>
+			</div>
+			<!-- /wp:html -->
 
 			<!-- wp:paragraph -->
 			<p><a href="https://guitarpr.com/robin-guitars-launches-mat-mitchell-signature-machete/">Read the press release &rarr;</a></p>

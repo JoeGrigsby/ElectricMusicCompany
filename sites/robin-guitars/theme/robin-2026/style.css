@@ -204,6 +204,39 @@ Text Domain: robin-2026
   .rg-model-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+.rg-spotlight__headline h2 {
+  font-size: clamp(1.75rem, 2.4vw + 1rem, 2.75rem);
+  line-height: 1.05;
+}
+.rg-spotlight__badge-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+.rg-spotlight__badge {
+  flex: 0 0 auto;
+  margin: 0;
+  font-family: var(--wp--preset--font-family--display);
+  text-transform: uppercase;
+  line-height: 1.05;
+  font-size: 1.375rem;
+  letter-spacing: 0.02em;
+  border: 2px solid var(--wp--preset--color--paper);
+  padding: 0.6rem 0.75rem;
+  max-width: 8rem;
+}
+.rg-spotlight__copy {
+  flex: 1 1 auto;
+  margin: 0;
+}
+@media (max-width: 782px) {
+  .rg-spotlight > * {
+    flex-basis: 100% !important;
+    flex-grow: 1 !important;
+  }
+}
+
 .rg-band { padding: var(--wp--custom--spacing--band, var(--wp--preset--spacing--band)) 0; }
 .rg-band--dark { background: var(--wp--preset--color--ink); color: var(--wp--preset--color--paper); }
 .rg-band--cream { background: var(--wp--preset--color--cream); color: var(--wp--preset--color--text-on-light); }
