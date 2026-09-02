@@ -11,7 +11,7 @@ return array(
 	'title'      => __( 'Robin Artist Spotlight', 'robin-2026' ),
 	'categories' => array( 'robin-2026' ),
 	'content'    => '
-<!-- wp:group {"tagName":"section","className":"rg-band rg-band--dark rg-spotlight-section","layout":{"type":"constrained"}} -->
+<!-- wp:group {"tagName":"section","className":"rg-band rg-band--dark rg-spotlight-section","layout":{"type":"constrained","contentSize":"90rem"}} -->
 <section class="wp-block-group rg-band rg-band--dark rg-spotlight-section">
 
 	<!-- wp:html -->
