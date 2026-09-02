@@ -22,7 +22,7 @@ return array(
 		</a>
 		<!-- /wp:html -->
 
-		<!-- wp:navigation {"textColor":"paper","overlayMenu":"mobile","layout":{"type":"flex","justifyContent":"right"},"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.04em","fontSize":"0.875rem"}}} -->
+		<!-- wp:navigation {"textColor":"paper","overlayMenu":"mobile","className":"rg-nav","layout":{"type":"flex","justifyContent":"right"},"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.05em","fontSize":"1rem"}}} -->
 		<!-- wp:navigation-link {"label":"Guitars","url":"/guitars/"} /-->
 		<!-- wp:navigation-link {"label":"History","url":"/history/"} /-->
 		<!-- wp:navigation-link {"label":"Artist","url":"/artist/"} /-->

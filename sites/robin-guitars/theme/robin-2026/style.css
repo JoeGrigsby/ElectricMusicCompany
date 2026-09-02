@@ -13,6 +13,10 @@ Text Domain: robin-2026
 
 /* Block-specific styles that don't fit theme.json presets live here. */
 
+.rg-nav {
+  font-family: var(--wp--preset--font-family--display);
+}
+
 .rg-logo {
   display: block;
   line-height: 0;
