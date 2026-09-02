@@ -103,15 +103,14 @@ Text Domain: robin-2026
 
 .rg-hero {
   position: relative;
-  /* Both values track the hero photo's own aspect ratio (1464x1294) so
-     the image fills consistently instead of shrinking to a sliver on
-     wide viewports: width scales with vw up to a px cap, height derives
-     from the same rate (55vw * 1294/1464 ≈ 48.6vw) so it always meets
-     the box with no letterboxing or vertical crop mismatch. */
-  min-height: clamp(26rem, 48.6vw, 53rem);
+  /* Full-bleed cover, anchored bottom-right (owner call, round 4) — crops
+     as needed per viewport, but always keeps the guitar body/lower bout
+     (bottom-right of the source photo) in frame rather than the empty
+     workshop background at top-left. */
+  min-height: clamp(28rem, 42vw, 44rem);
   background-color: var(--wp--preset--color--ink);
-  background-size: min(55vw, 60rem) auto;
-  background-position: right center;
+  background-size: cover;
+  background-position: right bottom;
   background-repeat: no-repeat;
   color: var(--wp--preset--color--paper);
   display: flex;
@@ -124,9 +123,9 @@ Text Domain: robin-2026
   background: linear-gradient(
     90deg,
     var(--wp--preset--color--ink) 0%,
-    color-mix(in srgb, var(--wp--preset--color--ink) 78%, transparent) 38%,
-    color-mix(in srgb, var(--wp--preset--color--ink) 25%, transparent) 62%,
-    transparent 85%
+    color-mix(in srgb, var(--wp--preset--color--ink) 80%, transparent) 30%,
+    color-mix(in srgb, var(--wp--preset--color--ink) 35%, transparent) 55%,
+    transparent 80%
   );
 }
 .rg-hero__content {
@@ -155,9 +154,9 @@ Text Domain: robin-2026
 }
 @media (max-width: 600px) {
   .rg-hero {
-    min-height: 0;
+    min-height: 22rem;
     background-size: cover;
-    background-position: right top;
+    background-position: right bottom;
   }
   .rg-hero__scrim {
     background: linear-gradient(
@@ -220,6 +219,7 @@ Text Domain: robin-2026
 }
 .rg-spotlight {
   margin-top: 1.5rem;
+  flex-wrap: nowrap;
 }
 .rg-spotlight__headline h2 {
   font-size: clamp(1.75rem, 2.4vw + 1rem, 2.75rem);
@@ -231,14 +231,21 @@ Text Domain: robin-2026
   margin: 0 0 1rem;
 }
 .rg-spotlight__logo img {
-  width: clamp(9rem, 15vw, 13rem);
+  width: clamp(10rem, 16vw, 17rem);
   height: auto;
   display: block;
 }
 .rg-spotlight p {
   margin: 0 0 0.75rem;
 }
+.rg-spotlight__copy-col p {
+  font-size: 1.0625rem;
+  max-width: 34rem;
+}
 @media (max-width: 782px) {
+  .rg-spotlight {
+    flex-wrap: wrap;
+  }
   .rg-spotlight > * {
     flex-basis: 100% !important;
     flex-grow: 1 !important;

@@ -6,7 +6,7 @@ return array(
 	'title'      => __( 'Robin Cross-promo: Steamboat', 'robin-2026' ),
 	'categories' => array( 'robin-2026' ),
 	'content'    => '
-<!-- wp:group {"tagName":"section","className":"rg-band rg-band--dark","layout":{"type":"constrained","contentSize":"90rem"}} -->
+<!-- wp:group {"tagName":"section","className":"rg-band rg-band--dark","layout":{"type":"constrained","contentSize":"110rem"}} -->
 <section class="wp-block-group rg-band rg-band--dark">
 
 	<!-- wp:columns {"verticalAlignment":"center"} -->
