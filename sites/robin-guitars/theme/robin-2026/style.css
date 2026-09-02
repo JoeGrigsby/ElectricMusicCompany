@@ -16,6 +16,11 @@ Text Domain: robin-2026
 .rg-nav {
   font-family: var(--wp--preset--font-family--display);
 }
+.wp-block-button__link:hover,
+.wp-block-button__link:focus-visible {
+  background-color: #ed702d;
+}
+
 .rg-nav a,
 .rg-nav .wp-block-navigation-item__content {
   transition: color 180ms ease;
@@ -144,7 +149,10 @@ Text Domain: robin-2026
   margin: 0 0 0.5em;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
-.rg-hero h1 .is-accent {
+/* Bright emphasis orange — headline highlight words, distinct from the
+   base --accent token used for buttons/eyebrows. Reused wherever copy
+   needs this exact punch: hero headline, spotlight headline, etc. */
+.is-accent {
   color: #ed702d;
 }
 .rg-hero p.rg-intro {
@@ -218,12 +226,12 @@ Text Domain: robin-2026
   .rg-model-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-.rg-spotlight-section {
-  padding-top: clamp(2rem, 4vw, 3rem);
-  padding-bottom: clamp(2rem, 4vw, 3rem);
+.rg-band.rg-spotlight-section {
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+  padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
 }
 .rg-spotlight {
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
   flex-wrap: nowrap;
 }
 .rg-spotlight__headline h2 {

@@ -24,7 +24,7 @@ return array(
 		<!-- wp:column {"width":"22%","className":"rg-spotlight__headline"} -->
 		<div class="wp-block-column rg-spotlight__headline" style="flex-basis:22%;flex-grow:0;flex-shrink:0">
 			<!-- wp:heading {"level":2} -->
-			<h2>For those who <span style="color:var(--wp--preset--color--accent)">refuse</span> to sound like everyone else.</h2>
+			<h2>For those who <span class="is-accent">refuse</span> to sound like everyone else.</h2>
 			<!-- /wp:heading -->
 		</div>
 		<!-- /wp:column -->
