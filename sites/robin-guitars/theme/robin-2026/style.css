@@ -16,6 +16,16 @@ Text Domain: robin-2026
 .rg-nav {
   font-family: var(--wp--preset--font-family--display);
 }
+.rg-nav a,
+.rg-nav .wp-block-navigation-item__content {
+  transition: color 180ms ease;
+}
+.rg-nav a:hover,
+.rg-nav a:focus-visible,
+.rg-nav .wp-block-navigation-item__content:hover,
+.rg-nav .wp-block-navigation-item__content:focus-visible {
+  color: #ed702d;
+}
 
 .rg-logo {
   display: block;
