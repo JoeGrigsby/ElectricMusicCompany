@@ -70,46 +70,74 @@ Text Domain: robin-2026
 
 .rg-hero {
   position: relative;
-  background: var(--wp--preset--color--ink);
+  min-height: 34rem;
+  background-color: var(--wp--preset--color--ink);
+  background-size: cover;
+  background-position: center;
   color: var(--wp--preset--color--paper);
-}
-.rg-hero__media {
-  position: relative;
+  display: flex;
+  align-items: center;
   overflow: hidden;
 }
-.rg-hero__media img {
+.rg-hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--wp--preset--color--ink) 0%,
+    color-mix(in srgb, var(--wp--preset--color--ink) 78%, transparent) 38%,
+    color-mix(in srgb, var(--wp--preset--color--ink) 25%, transparent) 62%,
+    transparent 85%
+  );
+}
+.rg-hero__content {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 .rg-hero h1 {
   color: var(--wp--preset--color--paper);
   font-size: var(--wp--preset--font-size--hero);
   margin: 0 0 0.5em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 .rg-hero h1 .is-accent { color: var(--wp--preset--color--accent); }
 .rg-hero p.rg-intro {
   max-width: var(--wp--custom--measure);
   color: var(--wp--preset--color--text-muted-dark);
 }
+.rg-hero .rg-model-chip {
+  z-index: 1;
+}
 
 .rg-model-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 1px;
-  background: var(--wp--preset--color--accent-soft);
-  border-top: 1px solid var(--wp--preset--color--accent-soft);
+  gap: var(--wp--preset--spacing--gutter, 1.5rem);
+  background: var(--wp--preset--color--ink);
+  padding: var(--wp--preset--spacing--gutter, 1.5rem);
 }
 .rg-model-card {
-  background: var(--wp--preset--color--ink);
+  background: var(--wp--preset--color--ink-soft);
+  border: 1px solid var(--wp--preset--color--accent-soft);
+  border-radius: var(--wp--custom--radius-btn);
   color: var(--wp--preset--color--paper);
   text-decoration: none;
   display: block;
-  padding: 0 0 1rem;
+  padding: 1rem 1rem 1.25rem;
   text-align: center;
+  transition: border-color 180ms ease, transform 180ms ease;
 }
-.rg-model-card img { width: 100%; height: auto; display: block; }
+.rg-model-card:hover, .rg-model-card:focus-visible {
+  border-color: var(--wp--preset--color--accent);
+  transform: translateY(-2px);
+}
+.rg-model-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: calc(var(--wp--custom--radius-btn) - 2px);
+}
 .rg-model-card h3 {
   margin: 0.75rem 0 0.15rem;
   font-size: 1.125rem;

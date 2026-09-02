@@ -3,16 +3,25 @@
  * Homepage hero. Photo is a temporary crop from the approved mockup
  * (design-system/mockups/robin-home.jpg) — replace with real Avalon
  * photography. See planning/DECISIONS.md for the Avalon/Savoy label note.
+ *
+ * Full-bleed background-image hero (owner request, Sept 2026) — photo
+ * fills the section, text sits on top over a left-to-right scrim for
+ * legibility. Texas lockup is a placeholder icon+text pending the real
+ * Hand_Crafted_TX.png (DECISIONS.md).
  */
+$hero_img = esc_url( get_theme_file_uri( 'assets/img/hero-avalon-placeholder.jpg' ) );
+
 return array(
 	'title'      => __( 'Robin Hero', 'robin-2026' ),
 	'categories' => array( 'robin-2026' ),
 	'content'    => '
-<!-- wp:group {"tagName":"section","className":"rg-hero","layout":{"type":"grid","columns":2}} -->
-<section class="wp-block-group rg-hero">
+<!-- wp:group {"tagName":"section","className":"rg-hero"} -->
+<section class="wp-block-group rg-hero" style="background-image:url(' . $hero_img . ')">
 
-	<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|band","bottom":"var:preset|spacing|band","left":"var:preset|spacing|gutter","right":"var:preset|spacing|gutter"}}}} -->
-	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--band);padding-right:var(--wp--preset--spacing--gutter);padding-bottom:var(--wp--preset--spacing--band);padding-left:var(--wp--preset--spacing--gutter)">
+	<div class="rg-hero__scrim"></div>
+
+	<!-- wp:group {"layout":{"type":"constrained"},"className":"rg-hero__content","style":{"spacing":{"padding":{"top":"var:preset|spacing|band","bottom":"var:preset|spacing|band","left":"var:preset|spacing|gutter","right":"var:preset|spacing|gutter"}}}} -->
+	<div class="wp-block-group rg-hero__content" style="padding-top:var(--wp--preset--spacing--band);padding-right:var(--wp--preset--spacing--gutter);padding-bottom:var(--wp--preset--spacing--band);padding-left:var(--wp--preset--spacing--gutter)">
 
 		<!-- wp:heading {"level":1} -->
 		<h1>Built one<br>at a time.<br><span class="is-accent">Played for<br>a lifetime.</span></h1>
@@ -40,15 +49,10 @@ return array(
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"className":"rg-hero__media"} -->
-	<div class="wp-block-group rg-hero__media">
-		<img src="' . esc_url( get_theme_file_uri( 'assets/img/hero-avalon-placeholder.jpg' ) ) . '" alt="Robin Guitars Avalon, flame-maple top, on a workshop bench" />
-		<div class="rg-model-chip">
-			<span class="rg-model-chip__label">Model Shown</span>
-			Avalon
-		</div>
+	<div class="rg-model-chip">
+		<span class="rg-model-chip__label">Model Shown</span>
+		Avalon
 	</div>
-	<!-- /wp:group -->
 
 </section>
 <!-- /wp:group -->
