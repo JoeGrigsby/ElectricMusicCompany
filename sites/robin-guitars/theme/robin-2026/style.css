@@ -93,9 +93,14 @@ Text Domain: robin-2026
 
 .rg-hero {
   position: relative;
-  min-height: 34rem;
+  /* Both values track the hero photo's own aspect ratio (1464x1294) so
+     the image fills consistently instead of shrinking to a sliver on
+     wide viewports: width scales with vw up to a px cap, height derives
+     from the same rate (55vw * 1294/1464 ≈ 48.6vw) so it always meets
+     the box with no letterboxing or vertical crop mismatch. */
+  min-height: clamp(26rem, 48.6vw, 53rem);
   background-color: var(--wp--preset--color--ink);
-  background-size: contain;
+  background-size: min(55vw, 60rem) auto;
   background-position: right center;
   background-repeat: no-repeat;
   color: var(--wp--preset--color--paper);
@@ -126,7 +131,7 @@ Text Domain: robin-2026
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 .rg-hero h1 .is-accent {
-  color: color-mix(in srgb, var(--wp--preset--color--accent) 80%, white);
+  color: #ed702d;
 }
 .rg-hero p.rg-intro {
   max-width: var(--wp--custom--measure);
@@ -190,7 +195,7 @@ Text Domain: robin-2026
 .rg-model-card p {
   margin: 0;
   font-size: 0.75rem;
-  color: var(--wp--preset--color--text-muted-dark);
+  color: var(--wp--preset--color--paper);
 }
 @media (max-width: 782px) {
   .rg-model-grid { grid-template-columns: repeat(3, 1fr); }
