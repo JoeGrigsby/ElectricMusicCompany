@@ -11,17 +11,18 @@ content, pricing, or legal matters. Mark resolved items with the answer + date.
 2. **[OPEN] Mockup files.** Final PNGs (or Figma) for all three homepages into
    `design-system/mockups/` as robin-home.png, steamboat-home.png,
    riogrande-home.png.
-11. **[OPEN] Robin real photography + model-photo mapping.** The Robin theme
-    build (`sites/robin-guitars/theme/robin-2026/`) currently uses temporary
-    crops from `design-system/mockups/robin-home.jpg` for the hero, the six
-    model-strip thumbnails, the artist-spotlight photo, and the two
-    cross-promo band photos — see the `-placeholder.jpg` filenames in
-    `theme/robin-2026/assets/img/`. Real photos were shared in chat but
-    could not be saved (pasted images aren't accessible as files in this
-    environment) — they need to arrive as actual file attachments (or a
-    zip) before they can replace the placeholders. Once they land, confirm
-    which photo is which of the six models (Avalon / Machete / Medley /
-    Ranger / Rawhide / Savoy) before wiring them in — do not guess.
+11. **[OPEN] Robin real photography + model-photo mapping.** Real assets
+    landed for: header logo (`robin-logo.png`), Hand Crafted TX graphic
+    (`hand-crafted-tx.png`), the hero photo (`hero-avalon-placeholder.jpg`,
+    still named "avalon" though the hero chip reads "Savoy Classic" — see
+    the resolved note below), and the artist-spotlight photo + Machete
+    wordmark logo (`artist-mat-mitchell.jpg`, `mat-mitchell-machete-logo.png`).
+    Still placeholder (`-placeholder.jpg` in `theme/robin-2026/assets/img/`):
+    the six model-strip thumbnails and the two cross-promo band photos
+    (Rio Grande pickups, Steamboat amp) — those still need real files, and
+    once they land, confirm which photo is which of the six models (Avalon /
+    Machete / Medley / Ranger / Rawhide / Savoy) before wiring them in — do
+    not guess.
 
 ## Platform
 
@@ -68,6 +69,11 @@ content, pricing, or legal matters. Mark resolved items with the answer + date.
   "correct it to Avalon" call. Swap this note out once real Savoy
   photography lands and the hero photo actually matches the label.
   (Owner, Sept 2026.)
+- **Mat Mitchell artist-spotlight assets.** Real photo
+  (`artist-mat-mitchell.jpg`, photo credit Michelle Shiers) and real
+  Machete wordmark logo (`mat-mitchell-machete-logo.png`, credit Ken
+  Taylor) wired into the theme, replacing the placeholder crop and
+  text badge. (Sept 2026.)
 - **Nav typo.** The approved mockup's Robin header reads "GALLARIES" —
   corrected to "Galleries" in the built theme nav; flagging since it's a
   copy fix, not a design change. (Sept 2026.)
